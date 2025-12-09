@@ -1,110 +1,69 @@
+/* Zerar margens padrão */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-  font-family: 'Arial Narrow', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* MENU */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* HEADER COM LOGO + MENU */
 header {
-  background: white;
-  padding: 15px;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
 }
 
-nav {
-  text-align: center;
+/* LOGO PEQUENA E REDONDA */
+.logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
-nav a {
-  margin: 0 20px;
-  text-decoration: none;
-  color: black;
-  font-size: 20px;
-  font-weight: bold;
+/* MENU SUPERIOR */
+.menu a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
 }
 
-/* HERO */
+.menu a:hover {
+    text-decoration: underline;
+}
+
+/* HERO COM BANDEIRA */
 .hero {
-  width: 100%;
-  height: 100vh;
-  background-image: url("bandeirabrasil.jpg");
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    background-image: url("bandeirabrasil.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
 }
 
-.hero-logo {
-  width: 300px;
+/* SEÇÕES DE BAIXO */
+.secao {
+    padding: 80px 20px;
+    background: #f2f2f2;
+    border-bottom: 2px solid #ddd;
 }
 
-/* SOBRE */
-.sobre-section {
-  width: 100%;
-  padding: 60px 5%;
+.secao h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
 }
 
-.sobre-section h2 {
-  font-size: 34px;
-  font-weight: 700;
-  border-bottom: 2px solid #000;
-  display: inline-block;
-  margin-bottom: 30px;
-}
-
-.sobre-container {
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
-}
-
-.sobre-texto {
-  width: 60%;
-  font-size: 32px;
-  line-height: 1.3;
-}
-
-.sobre-img {
-  width: 33%;
-  border-radius: 6px;
-  box-shadow: 0px 0px 8px rgba(0,0,0,0.15);
-}
-
-/* REDES SOCIAIS */
-.redes-section {
-  width: 100%;
-  padding: 60px 5%;
-}
-
-.redes-section h2 {
-  font-size: 34px;
-  font-weight: 700;
-  border-bottom: 2px solid #000;
-  display: inline-block;
-  margin-bottom: 40px;
-}
-
-.redes-container {
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
-}
-
-.redes-col {
-  width: 45%;
-}
-
-.rede-item {
-  margin-bottom: 35px;
-}
-
-.rede-titulo {
-  font-size: 24px;
-  font-weight: bold;
+.secao p {
+    font-size: 18px;
 }
